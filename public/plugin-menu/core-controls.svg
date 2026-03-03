@@ -1,0 +1,15 @@
+<svg width="1200" height="1200" viewBox="0 0 1200 1200" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <rect width="1200" height="1200" fill="#0A0C11"/>
+  <rect x="92" y="96" width="1016" height="1008" rx="40" fill="#121823" stroke="#2C3855"/>
+  <rect x="170" y="214" width="860" height="170" rx="20" fill="#1A2234" stroke="#445780"/>
+  <rect x="230" y="268" width="210" height="62" rx="18" fill="#EAF1FF"/>
+  <rect x="470" y="268" width="210" height="62" rx="18" fill="#2D3A5A"/>
+  <rect x="710" y="268" width="260" height="62" rx="18" fill="#2D3A5A"/>
+  <rect x="170" y="430" width="860" height="340" rx="24" fill="#161E31" stroke="#3E4E79"/>
+  <circle cx="268" cy="600" r="28" fill="#EAF1FF"/>
+  <rect x="320" y="584" width="560" height="32" rx="16" fill="#8CA1D3"/>
+  <circle cx="956" cy="600" r="28" fill="#EAF1FF"/>
+  <rect x="170" y="828" width="860" height="160" rx="22" fill="#1A2235" stroke="#4B5E8A"/>
+  <rect x="232" y="890" width="736" height="36" rx="12" fill="#2D3A5A"/>
+  <text x="600" y="1035" fill="#EAF1FF" font-family="Inter, Arial, sans-serif" font-size="56" text-anchor="middle" font-weight="700">Core Controls</text>
+</svg>

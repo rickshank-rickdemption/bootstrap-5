@@ -1,0 +1,73 @@
+.logo-loop {
+  width: 100%;
+  overflow: hidden;
+  position: relative;
+  padding: 0.75rem 0;
+  mask-image: linear-gradient(to right, transparent, #000 8%, #000 92%, transparent);
+  -webkit-mask-image: linear-gradient(to right, transparent, #000 8%, #000 92%, transparent);
+}
+
+.logo-loop-track {
+  display: flex;
+  align-items: stretch;
+  width: max-content;
+  animation: logo-loop-scroll var(--loop-duration, 34s) linear infinite;
+}
+
+.logo-loop-item {
+  min-width: 128px;
+  padding: 0 1.05rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 0.55rem;
+}
+
+.logo-loop-icon {
+  width: auto;
+  height: auto;
+  border: 0;
+  background: transparent;
+  color: #9ca3af;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.logo-loop-icon i {
+  font-size: 1.35rem;
+}
+
+.logo-loop-name {
+  color: #aeb5c1;
+  font-size: 0.84rem;
+  font-weight: 500;
+  line-height: 1;
+  text-align: center;
+}
+
+@keyframes logo-loop-scroll {
+  from {
+    transform: translate3d(0, 0, 0);
+  }
+  to {
+    transform: translate3d(-50%, 0, 0);
+  }
+}
+
+@media (max-width: 768px) {
+  .logo-loop-item {
+    min-width: 108px;
+    padding: 0 0.8rem;
+  }
+
+  .logo-loop-icon {
+    width: auto;
+    height: auto;
+  }
+
+  .logo-loop-name {
+    font-size: 0.79rem;
+  }
+}

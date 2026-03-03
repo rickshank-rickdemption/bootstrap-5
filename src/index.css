@@ -1,0 +1,100 @@
+:root {
+  font-family: Inter, system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, sans-serif;
+  text-rendering: geometricPrecision;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  --primary: #0d1b2a;
+  --secondary: #800000;
+  --accent: #00b4d8;
+  --bg: #000000;
+  --text: #f5f7fa;
+  --surface: #11141b;
+  --line: rgba(255, 255, 255, 0.2);
+}
+
+html[data-theme='light'] {
+  --primary: #0d1b2a;
+  --secondary: #800000;
+  --accent: #00b4d8;
+  --bg: #ffffff;
+  --text: #212529;
+  --surface: #ffffff;
+  --line: rgba(13, 27, 42, 0.16);
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  min-width: 320px;
+  background: var(--bg);
+  color: var(--text);
+  overflow-x: hidden;
+  transition: background-color 0.2s ease, color 0.2s ease;
+}
+
+#root {
+  min-height: 100vh;
+  overflow-x: hidden;
+}
+
+.page-shell {
+  background: var(--bg);
+}
+
+:root {
+  --btn-orb-bg: #171b22;
+  --btn-orb-border: rgba(255, 255, 255, 0.26);
+  --btn-orb-text: #edf2fb;
+  --btn-orb-shadow:
+    inset 0 1px 0 rgba(255, 255, 255, 0.26),
+    inset 0 -18px 30px rgba(0, 0, 0, 0.35),
+    0 8px 24px rgba(0, 0, 0, 0.35);
+}
+
+html[data-theme='light'] {
+  --btn-orb-bg: #e2e8f0;
+  --btn-orb-border: rgba(13, 27, 42, 0.24);
+  --btn-orb-text: #0f172a;
+  --btn-orb-shadow:
+    inset 0 1px 0 rgba(255, 255, 255, 0.82),
+    inset 0 -12px 22px rgba(13, 27, 42, 0.08),
+    0 8px 20px rgba(13, 27, 42, 0.16);
+}
+
+:is(button:not(.icon-btn), .btn, .footer-pill-btn, .action-button, .delivery-chip, .replica-controls button, .hero-cta-btn, .hero-cta-star .inner-content) {
+  background: var(--btn-orb-bg) !important;
+  border-color: var(--btn-orb-border) !important;
+  color: var(--btn-orb-text) !important;
+  box-shadow: var(--btn-orb-shadow) !important;
+  transform: translateY(0) scale(1);
+  transition:
+    transform 0.42s cubic-bezier(0.22, 1, 0.36, 1),
+    box-shadow 0.42s cubic-bezier(0.22, 1, 0.36, 1),
+    border-color 0.32s ease,
+    background-color 0.32s ease !important;
+}
+
+:is(button:not(.icon-btn), .btn, .footer-pill-btn, .delivery-chip, .replica-controls button, .hero-cta-btn, .hero-cta-star .inner-content):hover {
+  transform: translateY(-3px) scale(1.015);
+  border-color: rgba(255, 255, 255, 0.4) !important;
+  box-shadow:
+    inset 0 1px 0 rgba(255, 255, 255, 0.34),
+    inset 0 -18px 30px rgba(0, 0, 0, 0.34),
+    0 14px 30px rgba(0, 0, 0, 0.36) !important;
+}
+
+html[data-theme='light'] :is(button:not(.icon-btn), .btn, .footer-pill-btn, .delivery-chip, .replica-controls button, .hero-cta-btn, .hero-cta-star .inner-content):hover {
+  border-color: rgba(13, 27, 42, 0.34) !important;
+  box-shadow:
+    inset 0 1px 0 rgba(255, 255, 255, 0.92),
+    inset 0 -12px 22px rgba(13, 27, 42, 0.08),
+    0 12px 24px rgba(13, 27, 42, 0.2) !important;
+}
+
+:is(button:not(.icon-btn), .btn, .footer-pill-btn, .delivery-chip, .replica-controls button, .hero-cta-btn, .hero-cta-star .inner-content):active {
+  transform: translateY(-1px) scale(0.99);
+  transition-duration: 0.14s !important;
+}
