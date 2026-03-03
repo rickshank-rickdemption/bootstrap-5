@@ -783,6 +783,8 @@ html[data-theme="light"] .scrollspy-section + .scrollspy-section {
 
 #dynModalPreview .modal-dialog {
   max-width: 340px;
+  pointer-events: auto;
+  z-index: 3101;
 }
 
 .modal-square-content {
@@ -813,6 +815,8 @@ html[data-theme="light"] .scrollspy-section + .scrollspy-section {
   box-shadow: none;
   background-size: 0.46rem;
   filter: invert(84%) sepia(3%) saturate(387%) hue-rotate(202deg) brightness(103%) contrast(88%);
+  pointer-events: auto;
+  cursor: pointer;
 }
 
 #dynModalPreview .btn-close:hover {
@@ -865,6 +869,16 @@ html[data-theme="light"] .scrollspy-section + .scrollspy-section {
 #dynModalPreview .modal-content {
   backdrop-filter: blur(8px);
   -webkit-backdrop-filter: blur(8px);
+  pointer-events: auto;
+  z-index: 3101;
+}
+
+#dynModalPreview {
+  z-index: 3100;
+}
+
+.modal-backdrop.show {
+  z-index: 3090;
 }
 
 @media (max-width: 767.98px) {
