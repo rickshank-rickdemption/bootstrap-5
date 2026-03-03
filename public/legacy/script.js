@@ -474,7 +474,7 @@ const renderDemoByPlugin = (plugin, data) => {
         <button class="btn btn-outline-secondary btn-sm modal-launch-btn" type="button" data-preview-src="img/web_optimized_1200x800_97kb.jpg" data-preview-alt="Preview image 10">Image 10</button>
       </div>
 
-      <div class="modal fade" id="dynModalPreview" tabindex="-1" aria-hidden="true">
+      <div class="modal" id="dynModalPreview" tabindex="-1" aria-hidden="true">
         <div class="modal-dialog modal-dialog-centered modal-lg">
           <div class="modal-content modal-gallery-shell modal-square-content">
             <div class="modal-header">
@@ -907,7 +907,11 @@ const wireInteractions = (plugin) => {
     const modalEl = document.getElementById("dynModalPreview");
     const previewImage = document.getElementById("dynPreviewImage");
     if (modalEl && previewImage) {
-      const modal = bootstrap.Modal.getOrCreateInstance(modalEl);
+      const modal = new bootstrap.Modal(modalEl, {
+        backdrop: false,
+        keyboard: true,
+        focus: false,
+      });
       modalEl.addEventListener("hidden.bs.modal", cleanupBootstrapOverlays);
       document.querySelectorAll("[data-preview-src]").forEach((thumb) => {
         thumb.addEventListener("click", () => {
