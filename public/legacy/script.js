@@ -276,6 +276,19 @@ const plugins = [
   "preloader",
 ];
 
+const cleanupBootstrapOverlays = () => {
+  document.querySelectorAll(".modal").forEach((modalEl) => {
+    const instance = bootstrap.Modal.getInstance(modalEl);
+    if (!instance) return;
+    instance.hide();
+    instance.dispose();
+  });
+  document.querySelectorAll(".modal-backdrop").forEach((backdrop) => backdrop.remove());
+  document.body.classList.remove("modal-open");
+  document.body.style.removeProperty("overflow");
+  document.body.style.removeProperty("padding-right");
+};
+
 const pluginData = {
   introduction: {
     title: "Introduction",
@@ -675,6 +688,8 @@ const renderDemoByPlugin = (plugin, data) => {
 };
 
 const renderPluginPage = () => {
+  cleanupBootstrapOverlays();
+
   const plugin = getCurrentPlugin();
   const data = pluginData[plugin];
   const rootEl = document.getElementById("plugin-root");
@@ -893,6 +908,7 @@ const wireInteractions = (plugin) => {
     const previewImage = document.getElementById("dynPreviewImage");
     if (modalEl && previewImage) {
       const modal = bootstrap.Modal.getOrCreateInstance(modalEl);
+      modalEl.addEventListener("hidden.bs.modal", cleanupBootstrapOverlays);
       document.querySelectorAll("[data-preview-src]").forEach((thumb) => {
         thumb.addEventListener("click", () => {
           const src = thumb.getAttribute("data-preview-src");
