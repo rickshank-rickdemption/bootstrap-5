@@ -276,17 +276,20 @@ const plugins = [
   "preloader",
 ];
 
-const cleanupBootstrapOverlays = () => {
-  document.querySelectorAll(".modal").forEach((modalEl) => {
-    const instance = bootstrap.Modal.getInstance(modalEl);
-    if (!instance) return;
-    instance.hide();
-    instance.dispose();
-  });
+const resetBootstrapOverlayState = () => {
   document.querySelectorAll(".modal-backdrop").forEach((backdrop) => backdrop.remove());
   document.body.classList.remove("modal-open");
   document.body.style.removeProperty("overflow");
   document.body.style.removeProperty("padding-right");
+};
+
+const cleanupBootstrapOverlays = () => {
+  document.querySelectorAll(".modal").forEach((modalEl) => {
+    const instance = bootstrap.Modal.getInstance(modalEl);
+    if (!instance) return;
+    instance.dispose();
+  });
+  resetBootstrapOverlayState();
 };
 
 const pluginData = {
@@ -912,7 +915,7 @@ const wireInteractions = (plugin) => {
         keyboard: true,
         focus: false,
       });
-      modalEl.addEventListener("hidden.bs.modal", cleanupBootstrapOverlays);
+      modalEl.addEventListener("hidden.bs.modal", resetBootstrapOverlayState);
       document.querySelectorAll("[data-preview-src]").forEach((thumb) => {
         thumb.addEventListener("click", () => {
           const src = thumb.getAttribute("data-preview-src");

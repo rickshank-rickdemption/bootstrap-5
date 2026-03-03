@@ -813,6 +813,7 @@ html[data-theme="light"] .scrollspy-section + .scrollspy-section {
   box-shadow: none;
   background-size: 0.46rem;
   filter: invert(84%) sepia(3%) saturate(387%) hue-rotate(202deg) brightness(103%) contrast(88%);
+  cursor: pointer;
 }
 
 #dynModalPreview .btn-close:hover {
@@ -2826,8 +2827,9 @@ html[data-theme="light"] #dynModalPreview .modal-body {
 html[data-theme="light"] #dynModalPreview .btn-close {
   background-color: transparent;
   background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'%3e%3cpath stroke='rgba%2817,24,39,0.9%29' stroke-linecap='round' stroke-width='1.8' d='M3 3l10 10M13 3L3 13'/%3e%3c/svg%3e");
+  background-size: 0.72rem;
   filter: none;
-  opacity: 0.75;
+  opacity: 1;
 }
 
 html[data-theme="light"] #dynModalPreview .btn-close:hover {
