@@ -283,18 +283,19 @@
 .overview-kicker-badge {
   display: inline-flex;
   align-items: center;
-  border-radius: 999px;
-  padding: 0.24rem 0.72rem;
-  background: rgba(255, 255, 255, 0.08);
-  color: #ffffff;
+  border-radius: 0;
+  padding: 0;
+  background: transparent;
+  color: inherit;
   border: 0;
-  backdrop-filter: blur(10px) saturate(125%);
-  -webkit-backdrop-filter: blur(10px) saturate(125%);
+  backdrop-filter: none;
+  -webkit-backdrop-filter: none;
   box-shadow: none;
 }
 
 #plugins .section-kicker {
-  color: #000000;
+  color: #ffffff;
+  font-size: 0.82rem;
 }
 
 .section-title {
@@ -988,12 +989,16 @@ html[data-theme='light'] .section-kicker {
 }
 
 html[data-theme='light'] .overview-kicker-badge {
-  background: rgba(255, 255, 255, 0.82);
-  color: #0d1b2a;
+  background: transparent;
+  color: inherit;
   border: 0;
-  backdrop-filter: blur(10px) saturate(125%);
-  -webkit-backdrop-filter: blur(10px) saturate(125%);
+  backdrop-filter: none;
+  -webkit-backdrop-filter: none;
   box-shadow: none;
+}
+
+html[data-theme='light'] #plugins .section-kicker {
+  color: #800000;
 }
 
 html[data-theme='light'] .section-copy {
