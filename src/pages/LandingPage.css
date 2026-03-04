@@ -293,6 +293,10 @@
   box-shadow: none;
 }
 
+#overview .rb-reveal:first-child {
+  margin-left: -0.35rem;
+}
+
 #plugins .section-kicker {
   color: #ffffff;
   font-size: 0.82rem;
@@ -812,6 +816,10 @@
 }
 
 @media (max-width: 768px) {
+  #overview .rb-reveal:first-child {
+    margin-left: 0;
+  }
+
   .landing-footer-shell {
     padding: 2.8rem 1rem 1.35rem;
   }
