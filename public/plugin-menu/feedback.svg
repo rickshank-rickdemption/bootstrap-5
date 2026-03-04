@@ -14,5 +14,5 @@
     <rect x="466" y="760" width="270" height="150" rx="20" fill="#1B2236" stroke="#4E5F8E"/>
     <rect x="762" y="760" width="268" height="150" rx="20" fill="#1B2236" stroke="#4E5F8E"/>
   </g>
-  <text x="600" y="1035" fill="#EAF1FF" font-family="Inter, Arial, sans-serif" font-size="56" text-anchor="middle" font-weight="700">Feedback Plugins</text>
+  <text x="600" y="1035" fill="#EAF1FF" font-family="Poppins, Arial, sans-serif" font-size="56" text-anchor="middle" font-weight="700">Feedback Plugins</text>
 </svg>

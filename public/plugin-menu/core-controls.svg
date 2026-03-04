@@ -11,5 +11,5 @@
   <circle cx="956" cy="600" r="28" fill="#EAF1FF"/>
   <rect x="170" y="828" width="860" height="160" rx="22" fill="#1A2235" stroke="#4B5E8A"/>
   <rect x="232" y="890" width="736" height="36" rx="12" fill="#2D3A5A"/>
-  <text x="600" y="1035" fill="#EAF1FF" font-family="Inter, Arial, sans-serif" font-size="56" text-anchor="middle" font-weight="700">Core Controls</text>
+  <text x="600" y="1035" fill="#EAF1FF" font-family="Poppins, Arial, sans-serif" font-size="56" text-anchor="middle" font-weight="700">Core Controls</text>
 </svg>

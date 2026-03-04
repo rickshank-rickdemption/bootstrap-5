@@ -14,5 +14,5 @@
   <circle cx="260" cy="634" r="22" fill="#EAF1FF"/>
   <circle cx="520" cy="634" r="22" fill="#EAF1FF"/>
   <circle cx="780" cy="634" r="22" fill="#EAF1FF"/>
-  <text x="600" y="1035" fill="#EAF1FF" font-family="Inter, Arial, sans-serif" font-size="56" text-anchor="middle" font-weight="700">Navigation Plugins</text>
+  <text x="600" y="1035" fill="#EAF1FF" font-family="Poppins, Arial, sans-serif" font-size="56" text-anchor="middle" font-weight="700">Navigation Plugins</text>
 </svg>

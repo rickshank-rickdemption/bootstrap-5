@@ -482,7 +482,7 @@ class InfiniteGridMenu {
           ctx.fillStyle = '#1f2937'
           ctx.fillRect(x, y, cellSize, cellSize)
           ctx.fillStyle = '#e5e7eb'
-          ctx.font = '600 42px Inter, Arial, sans-serif'
+          ctx.font = "600 42px 'Poppins', Arial, sans-serif"
           ctx.textAlign = 'center'
           ctx.textBaseline = 'middle'
           const label = (item.title || 'Item').slice(0, 2).toUpperCase()
